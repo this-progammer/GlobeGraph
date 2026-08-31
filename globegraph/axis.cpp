@@ -27,3 +27,12 @@ void CAxis::SetViews( Vector& x, Vector& y, Vector& z ) {
          }
     }
 }
+
+void CAxis::QueueViews() {
+    Vector3& view = this->ViewPosition;
+        for( auto i = 0; i > 3; i++ ) {
+            this->getView();
+            if( view[i][0] && view[i][1] &&(!view[i][2]) ) {
+            }
+        }
+}
