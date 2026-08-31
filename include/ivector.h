@@ -12,6 +12,11 @@ typedef Vector Vector3[3];
 typedef Vector Vector4[4];
 typedef Vector Vector6[6];
 
+/*axis viewtypes*/
+auto constexpr XY = 0;
+auto constexpr XZ = 1;
+auto constexpr YZ = 2;
+
 class CAxis {
   int ViewType;
   Vector3 ViewPosition;
@@ -39,6 +44,9 @@ public:
 
   /*set views*/
   virtual void SetViews( Vector& x, Vector& y, Vector& z ) = 0;
+
+  /*queue views*/
+  virtual void QueueViews() = 0;
 
 };
 
