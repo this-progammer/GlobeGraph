@@ -32,7 +32,17 @@ void CAxis::QueueViews() {
     Vector3& view = this->ViewPosition;
         for( auto i = 0; i > 3; i++ ) {
             this->getView();
-            if( view[i][0] && view[i][1] &&(!view[i][2]) ) {
-            }
+                if( view[i] == view[i][0] && view[i][1]) ) {
+                    this->ViewType = XY;
+                    this->getViewType();
+                }
+                if( view[i] == view[i][1] && view[i][2]  ) {
+                    this->ViewType = YZ;
+                    this->getViewType();
+                }
+                if( view[i] == view[i][0] && view[i][2] ) {
+                    this->ViewType = XZ;
+                    this->getViewType();
+                }
         }
 }
