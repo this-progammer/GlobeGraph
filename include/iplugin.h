@@ -25,6 +25,10 @@ public:
   virtual void ConnectToAPI() = 0;
   /*Disconnect to API*/
   virtual void DisconnectToAPI() = 0;
+  /*IncRef*/
+  virtual void IncRef() = 0;
+  /*DecRef*/
+  virtual void DecRef() = 0;
 };
 
 #endif
