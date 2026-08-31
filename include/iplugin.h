@@ -29,6 +29,8 @@ public:
   virtual void IncRef() = 0;
   /*DecRef*/
   virtual void DecRef() = 0;
+  /*Listen*/
+  virtual bool Listen() = 0;
 };
 
 #endif
