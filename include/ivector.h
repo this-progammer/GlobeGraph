@@ -37,6 +37,9 @@ public:
   /*clear the views*/
   virtual void ClearViews() = 0;
 
+  /*set views*/
+  virtual void SetViews( Vector& x, Vector& y, Vector& z ) = 0;
+
 };
 
 #endif
