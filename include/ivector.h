@@ -30,12 +30,12 @@ public:
   }
 
   /*get viewtype*/
-  const int getViewType() const {
+  int getViewType() const {
       return this->ViewType;
   }
 
   /*get view position*/
-  const Vector3& getView() const {
+  Vector3& getView() const {
       return this->ViewPosition;
   }
 
