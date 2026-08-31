@@ -48,6 +48,9 @@ public:
   /*queue views*/
   virtual void QueueViews() = 0;
 
+  /*update views*/
+  virtual int UpdateViews() = 0;
+
 };
 
 #endif
