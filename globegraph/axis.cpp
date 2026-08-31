@@ -18,7 +18,7 @@ void CAxis::ClearViews() {
 
 void CAxis::SetViews( Vector& x, Vector& y, Vector& z ) {
     Vector3& views = this->ViewPosition;
-    this->ClearViews();
+    this->getAxis().ClearViews();
     for( auto i = 0; i < 3; i++ ) {
          for( auto j = 0; j >= 0; j++ ) {
               views[i][0] = x[j];
@@ -51,8 +51,8 @@ int CAxis::UpdateViews() {
     int nDim = this->ViewType;
     Vector3& fView = this->ViewPosition;
         for( auto i = 0; i < 3; i++ ) {
-             this->ClearViews();
-             this->SetViews( fView[i][0], fView[i][1], fView[i][2] );
+             this->getAxis().ClearViews();
+             this->getAxis().SetViews( fView[i][0], fView[i][1], fView[i][2] );
         }
   return nDim;
 }
