@@ -7,6 +7,7 @@
 
 #define PLUGIN_ID 1
 
+/*Get Plugin Name*/
 typedef const char(*PFN_GET_PLUGIN_NAME)(const char* IPLUGIN);
 
 #endif
