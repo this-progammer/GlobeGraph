@@ -20,5 +20,5 @@ void TerrainGraph::CreateGraph( int nCol, int nRow, bool bDraw ) {
            }
            if( bDraw ) {
                this->m_Graph.getGraph().Draw();
-            }
+           }
 }
