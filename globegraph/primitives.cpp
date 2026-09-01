@@ -67,6 +67,11 @@ void IPrimitive::AddFace() {
      this->getSides();
 }
 
+void IPrimitive::RemoveFace() {
+     this->m_Sides[NULL] - 1;
+     this->getSides();
+}
+
 void IPrimitive::Select() {
      IPrimitive& shape = *this;
           for( auto i = shape.begin(); i != shape.end(); i++ ) {
