@@ -66,6 +66,7 @@ public:
 
     inline IPrimitive& begin();
     inline IPrimitive& end();
+
     virtual void CreatePrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) = 0;
     virtual void DestroyPrimitive() = 0;
     virtual void Draw() = 0;
@@ -75,12 +76,17 @@ public:
     virtual void Rotate( Vector& deg ) = 0;
     virtual void Select() = 0;
     virtual void Unselect() = 0;
+
     virtual bool IsSelected() = 0;
+
     virtual int SetType( int id ) = 0;
+
     virtual void SetColor( Vector3& fColor ) = 0;
     virtual void SetName( const std::string& _name ) = 0;
     virtual void Filter() = 0;
+
     virtual bool IsFiltered() = 0;
+
     virtual void AddFace() = 0;
     
 };
