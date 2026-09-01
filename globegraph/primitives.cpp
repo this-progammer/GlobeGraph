@@ -55,6 +55,7 @@ int IPrimitive::SetType( int id ) {
           this->getType();
           return PRIMITIVE_CUBE;
      }
+  return id;
 }
 
 void IPrimitive::AddFace() {
