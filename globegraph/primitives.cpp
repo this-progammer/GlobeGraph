@@ -108,10 +108,10 @@ void IPrimitive::Resize( Vector& scale ) {
           for( auto i = 0; i < 3; i++ ) {
                for( auto j = shape.begin(); j != shape.end(); j++ ) {
                     //shape.getScale();
-                    float f = ( mins[i] ) * scale + ( maxs[i] ) * scale;
+                    float fstep = ( mins[i] ) * scale + ( maxs[i] ) * scale;
                     shape.getScale();
                     // call scale update
-                    f;
+                    fstep;
                          if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
                              shape.DestroyPrimitive();
                          }
