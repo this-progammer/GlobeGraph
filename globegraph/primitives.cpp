@@ -63,3 +63,7 @@ void IPrimitive::AddFace() {
      this->m_Sides[i] + 1;
      this->getSides();
 }
+
+bool IPrimitive::IsSelected() {
+     return 1;
+}
