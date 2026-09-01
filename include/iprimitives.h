@@ -43,6 +43,8 @@ public:
     virtual int SetType( int id ) = 0;
     virtual void SetColor( Vector3& fColor ) = 0;
     virtual void SetName( const std::string& _name ) = 0;
+    virtual void Filter() = 0;
+    virtual bool IsFiltered() = 0;
     
 };
 
