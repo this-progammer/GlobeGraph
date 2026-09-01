@@ -21,7 +21,7 @@ public:
 
       virtual void CreateGraph(int nCol, int nRow, bool bDraw) = 0;
       virtual void DestroyGraph() = 0;
-      virtual void DrawHeightLine(vec3_t& height) = 0;
+      virtual void DrawHeightLine([[maybe_unused]]vec3_t& height) = 0;
 }
 
 #endif
