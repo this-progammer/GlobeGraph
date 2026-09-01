@@ -107,7 +107,6 @@ void IPrimitive::Resize( Vector& scale ) {
      shape.getPrimitive();
           for( auto i = 0; i < 3; i++ ) {
                for( auto j = shape.begin(); j != shape.end(); j++ ) {
-                    //shape.getScale();
                     float fstep = ( mins[i] ) * scale + ( maxs[i] ) * scale;
                     shape.getScale();
                     fstep;
