@@ -119,3 +119,15 @@ void IPrimitive::Resize( Vector& scale ) {
      }
 }
 
+void IPrimitive::Draw() {
+     float fBounds[2] = { this->m_Mins, this->m_Maxs };
+     Vector3& fColor = this->m_Color;
+     glBegin(GL_POLYGON);
+          for( int i = 0; i < 3; i++ ) {
+               glColor3f( fColor[i][0], fColor[i][1], fColor[i][2] );
+               glVertex3fv( &fBounds[i][0] );
+               glVertex3fv( &fBounds[i][1] );
+          }
+     glEnd();
+}
+
