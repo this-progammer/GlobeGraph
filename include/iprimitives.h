@@ -34,6 +34,12 @@ public:
     virtual void DestroyPrimitive() = 0;
     virtual void Draw() = 0;
     virtual void SetMinsMaxs( Vector3& fMins, Vector3& fMaxs ) = 0;
+    virtual void Resize( Vector& scale ) = 0;
+    virtual void Translate( Vector3& v ) = 0;
+    virtual void Rotate( Vector& deg ) = 0;
+    virtual void Select() = 0;
+    virtual void Unselect() = 0;
+    virtual bool IsSelected() = 0;
     
 };
 
