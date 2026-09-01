@@ -15,6 +15,8 @@
 #define PRIMITIVE_SPHERE 5
 #define PRIMITIVE_CUBE 6
 
+#define MAX_FACES 999
+
 class IPrimitive {
     Vector3 m_Mins;
     Vector3 m_Maxs;
@@ -22,12 +24,37 @@ class IPrimitive {
     Vector3 m_Color;
     Vector m_fScale;
     const std::string m_Name;
+    int m_Sides[MAX_FACES];
 public:
     IPrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) : m_Mins( mins ), m_Maxs( maxs ), m_Type( id ), m_Color( color ), m_fScale( scale ), m_Name( name ){}
     ~IPrimitive();
 
     inline IPrimitive& getPrimitive() {
-           return *this;
+        return *this;
+    }
+
+    inline Vector3& getMins() {
+        return m_Mins;
+    }
+
+    inline Vector3& getMaxs() {
+        return m_Maxs;
+    }
+
+    inline int& getType() {
+        return m_Type;
+    }
+
+    inline Vector3& getColor() {
+        return m_Color;
+    }
+
+    inline Vector& getScale() {
+        return m_fScale;
+    }
+
+    inline const std::string& getName() {
+        return m_Name;
     }
 
     virtual void CreatePrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) = 0;
