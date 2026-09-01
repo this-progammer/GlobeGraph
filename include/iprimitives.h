@@ -57,6 +57,10 @@ public:
         return m_Name;
     }
 
+    inline int& getSides() {
+        return m_Sides;
+    }
+
     virtual void CreatePrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) = 0;
     virtual void DestroyPrimitive() = 0;
     virtual void Draw() = 0;
