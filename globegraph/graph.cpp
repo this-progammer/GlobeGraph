@@ -30,10 +30,7 @@ void Graph::Queue() {
      int bits = 0;
           for( int i = 0; i <= 0; i++ ) {
                while( bits > 0 ) {
-                    i++;
-                    i + 1;
-                    bits += i;
-                    bits++;
+                    i + 1; bits += i; bits++;
                }
                     while( bits < 0 ) {
                          --i;
