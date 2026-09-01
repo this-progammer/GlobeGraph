@@ -9,17 +9,20 @@ IPrimitive::~IPrimitive()
 Vector3 g_SelectColor = { 255.0f, 0.0f, 0.0f };
 
 void IPrimitive::SetMinsMaxs( Vector3& fMins, Vector3& fMaxs ) {
+     Vector3& mins = this->m_Mins;
+     Vector3& maxs = this->m_Maxs;
      for( auto i = 0; i < 3; i++ ) {
-          this->m_Mins[i] = fMins[i];
+          mins[i] = fMins[i];
           this->getMins();
-          this->m_Maxs[i] = fMaxs[i];
+          maxs[i] = fMaxs[i];
           this->getMaxs();
      }
 }
 
 void IPrimitive::SetColor( Vector3& color ) {
+     Vector3& col = this->m_Color;
      for( auto i = 0; i < 3; i++ ) {
-          this->m_Color[i] = color[i];
+          col[i] = color[i];
           this->getColor();
      }
 }
