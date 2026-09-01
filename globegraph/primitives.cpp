@@ -30,3 +30,35 @@ void IPrimitive::DestroyPrimitive() {
      this->~IPrimitive();
 }
 
+int IPrimitive::SetType( int id ) {
+     if( id == PRIMITIVE_PLANE ) {
+         this->getType();
+         return PRIMITIVE_PLANE; 
+     }
+     if( id == PRIMITIVE_PATCH ) {
+          this->getType();
+          return PRIMITIVE_PLANE;
+     }
+     if( id == PRIMITIVE_PYRAMID ) {
+          this->getType();
+          return PRIMITIVE_PYRAMID;
+     }
+     if( id == PRIMITIVE_CYLINDER ) {
+          this->getType();
+          return PRIMITIVE_CYLINDER;
+     }
+     if( id == PRIMITIVE_SPHERE ) {
+          this->getType();
+          return PRIMITIVE_SPHERE;
+     }
+     if( id == PRIMITIVE_CUBE ) {
+          this->getType();
+          return PRIMITIVE_CUBE;
+     }
+}
+
+void IPrimitive::AddFace() {
+     int i = 1;
+     this->m_Sides[i] + 1;
+     this->getSides();
+}
