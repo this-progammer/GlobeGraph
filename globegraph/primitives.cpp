@@ -111,12 +111,11 @@ void IPrimitive::Resize( Vector& scale ) {
                     float fstep = ( mins[i] ) * scale + ( maxs[i] ) * scale;
                     shape.getScale();
                     fstep;
-                         if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
-                             for( auto n = shape.m_Sides; n < shape.getSides(); n-- ) {
-                                  shape.RemoveFace();
-                             }
+                    if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
+                         for( auto n = shape.m_Sides; n < shape.getSides(); n-- ) {
+                              shape.RemoveFace();
                          }
-                    
+                    }
                }
           }
 }
