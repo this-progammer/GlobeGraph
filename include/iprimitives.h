@@ -40,6 +40,9 @@ public:
     virtual void Select() = 0;
     virtual void Unselect() = 0;
     virtual bool IsSelected() = 0;
+    virtual int SetType( int id ) = 0;
+    virtual void SetColor( Vector3& fColor ) = 0;
+    virtual void SetName( const std::string& _name ) = 0;
     
 };
 
