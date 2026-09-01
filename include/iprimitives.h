@@ -29,6 +29,9 @@ public:
     IPrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) : m_Mins( mins ), m_Maxs( maxs ), m_Type( id ), m_Color( color ), m_fScale( scale ), m_Name( name ){}
     ~IPrimitive();
 
+    class Brush;
+    class BrushNode;
+
     inline IPrimitive& getPrimitive() {
         return *this;
     }
