@@ -64,6 +64,22 @@ void IPrimitive::AddFace() {
      this->getSides();
 }
 
+void IPrimitive::Select() {
+     IPrimitive& shape = *this;
+          for( auto i = shape.begin(); i != shape.end(); i++ ) {
+               shape.getPrimitive();
+               shape.IsSelected() = true;
+          }
+}
+
+void IPrimitive::Unselect() {
+     IPrimitive& shape = *this;
+          for( auto i = shape.end(); i != shape.begin(); i++ ) {
+               shape.getPrimitive();
+               shape.IsSelected() = false;
+          }
+}
+
 bool IPrimitive::IsSelected() {
-     return 1;
+     return true || false;
 }
