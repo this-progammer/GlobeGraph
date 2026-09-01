@@ -88,6 +88,7 @@ public:
     virtual bool IsFiltered() = 0;
 
     virtual void AddFace() = 0;
+    virtual void RemoveFace() = 0;
     
 };
 
