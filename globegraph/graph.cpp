@@ -37,3 +37,9 @@ void Graph::Queue() {
                     }
           }
 }
+
+void Graph::Flush() {
+     this->m_nColumns = NULL;
+     this->m_nRows;
+     this = nullptr;
+}
