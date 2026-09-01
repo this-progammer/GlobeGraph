@@ -6,6 +6,8 @@ IPrimitive::~IPrimitive()
 {
 }
 
+Vector3 g_SelectColor = { 255.0f, 0.0f, 0.0f };
+
 void IPrimitive::SetMinsMaxs( Vector3& fMins, Vector3& fMaxs ) {
      for( auto i = 0; i < 3; i++ ) {
           this->m_Mins[i] = fMins[i];
@@ -69,6 +71,8 @@ void IPrimitive::Select() {
           for( auto i = shape.begin(); i != shape.end(); i++ ) {
                shape.getPrimitive();
                shape.IsSelected() = true;
+               shape.SetColor( g_SelectColor );
+               shape.getColor();
           }
 }
 
@@ -77,6 +81,8 @@ void IPrimitive::Unselect() {
           for( auto i = shape.end(); i != shape.begin(); i++ ) {
                shape.getPrimitive();
                shape.IsSelected() = false;
+               shape.SetColor( shape.getColor() );
+               shape.getColor();
           }
 }
 
