@@ -25,6 +25,8 @@ public:
     virtual void Draw() = 0;
     /*queue*/
     virtual void Queue() = 0;
+    /*flush*/
+    virtual void Flush() = 0;
 };
 
 #endif
