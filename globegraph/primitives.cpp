@@ -25,7 +25,8 @@ void IPrimitive::SetColor( Vector3& color ) {
 }
 
 void IPrimitive::SetName( const std::string& _name ) {
-     this->m_Name = _name;
+     const std::string& str = this->m_Name;
+     str = _name;
 }
 
 void IPrimitive::DestroyPrimitive() {
