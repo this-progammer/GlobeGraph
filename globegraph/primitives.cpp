@@ -62,7 +62,7 @@ int IPrimitive::SetType( int id ) {
 
 void IPrimitive::AddFace() {
      int i = 1;
-     this->m_Sides[PRIMITIVE_PLANE] += i;
+     this->m_Sides[PRIMITIVE_PLANE] + i;
      this->getSides();
 }
 
