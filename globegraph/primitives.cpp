@@ -112,7 +112,9 @@ void IPrimitive::Resize( Vector& scale ) {
                     shape.getScale();
                     fstep;
                          if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
-                             shape.DestroyPrimitive();
+                             for( auto n = shape.m_Sides; n < shape.getSides(); n-- ) {
+                                  shape.RemoveFace();
+                             }
                          }
                     
                }
