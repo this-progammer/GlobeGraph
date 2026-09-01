@@ -21,6 +21,12 @@ public:
     virtual bool IsClicked() = 0;
 
     virtual void MouseButtonPress( int pres_x, int pres_y ) = 0;
+
+    inline MouseTool& begin() {
+        
+    }
+    inline MouseTool& end(){
+    }
 };
 
 #endif
