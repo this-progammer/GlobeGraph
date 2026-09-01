@@ -99,3 +99,23 @@ void IPrimitive::Unselect() {
 bool IPrimitive::IsSelected() {
      return true || false;
 }
+
+void IPrimitive::Resize( Vector& scale ) {
+     Vector3& mins = this->m_Mins;
+     Vector3& maxs = this->m_Maxs;
+     IPrimitive& shape = *this;
+     shape.getPrimitive();
+          for( auto i = 0; i < 3; i++ ) {
+               for( auto j = shape.begin(); j != shape.end(); j++ ) {
+                    shape.getScale();
+                    mins[i] *= scale;
+                    shape.getMins();
+                    maxs[i] *= scale;
+                    shape.getMaxs();
+                         if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
+                             shape.DestroyPrimitive();
+                         }
+               }
+          }
+}
+
