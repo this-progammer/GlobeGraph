@@ -61,6 +61,8 @@ public:
         return m_Sides;
     }
 
+    IPrimitive& begin();
+    IPrimitive& end();
     virtual void CreatePrimitive( Vector3& mins, Vector3& maxs, int id, Vector3& color, Vector scale, const std::string& name ) = 0;
     virtual void DestroyPrimitive() = 0;
     virtual void Draw() = 0;
