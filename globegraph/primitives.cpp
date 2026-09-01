@@ -105,17 +105,17 @@ void IPrimitive::Resize( Vector& scale ) {
      Vector3& maxs = this->m_Maxs;
      IPrimitive& shape = *this;
      shape.getPrimitive();
-          for( auto i = 0; i < 3; i++ ) {
-               for( auto j = shape.begin(); j != shape.end(); j++ ) {
-                    float fstep = ( mins[i] ) * scale + ( maxs[i] ) * scale;
-                    shape.getScale();
-                    fstep;
-                    if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
+     for( auto i = 0; i < 3; i++ ) {
+          for( auto j = shape.begin(); j != shape.end(); j++ ) {
+               float fstep = ( mins[i] ) * scale + ( maxs[i] ) * scale;
+               shape.getScale();
+               fstep;
+               if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
                          for( auto n = shape.m_Sides; n < shape.getSides(); n-- ) {
                               shape.RemoveFace();
-                         }
                     }
                }
           }
+     }
 }
 
