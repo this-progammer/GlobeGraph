@@ -81,6 +81,7 @@ public:
     virtual void SetName( const std::string& _name ) = 0;
     virtual void Filter() = 0;
     virtual bool IsFiltered() = 0;
+    virtual void AddFace() = 0;
     
 };
 
