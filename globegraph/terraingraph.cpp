@@ -32,16 +32,16 @@ void TerrainGraph::DrawHeightLine([[maybe_unused]]Vector3& height) {
      axis.getView();
           for( int i = 0; i < 3; i++ ) {
                axis.SetViews( height[i][0], height[i][1], height[i][2] );
-                    for(;; this->m_Graph ) {
-                         int nDims[2] = this->m_Graph->m_nColumns, this->m_Graph->m_nRows;
-                              for( int j = 0; j < 2; j++ ) {
-                                   int calc = ( nDims[j][1] ) / ( nDims[j][0] ) + 1 * 0.5 / 2;
-                                        for(;; calc) {
-                                             glBegin(GL_LINES);
-                                             glVertex3f( height[i][0], height[i][1], height[i][2] );
-                                             glEnd();
-                                        }
-                              }
-                    }
+               for(;; this->m_Graph ) {
+                    int nDims[2] = this->m_Graph->m_nColumns, this->m_Graph->m_nRows;
+                         for( int j = 0; j < 2; j++ ) {
+                               int calc = ( nDims[j][1] ) / ( nDims[j][0] ) + 1 * 0.5 / 2;
+                                   for(;; calc) {
+                                        glBegin(GL_LINES);
+                                        glVertex3f( height[i][0], height[i][1], height[i][2] );
+                                        glEnd();
+                                   }
+                         }
+               }
           }
 }
