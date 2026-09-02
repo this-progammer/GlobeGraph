@@ -5,3 +5,6 @@
 Toolbox::~Toolbox()
 {
 }
+
+/*SIGNAL ID*/
+int g_nSignalId = TOOLBOX_SIGNAL;
