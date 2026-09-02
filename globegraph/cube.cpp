@@ -33,6 +33,14 @@ void Cube::CreateCube() {
                                              std::cout << "Cube Invalid Sides... Destroying Cube..." << "\n";
                                          }
                                  }
+                             for( ;; auto f = cube.m_Sides[k] ) {
+                                 // 6 faces select cube...
+                                 cube.Select();
+                                 cube.IsSelected() = true;
+                                     if( !cube.IsSelected() ) {
+                                         cube.Unselect();
+                                     }
+                             }
                          }
                }
        }
