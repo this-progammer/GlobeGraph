@@ -20,6 +20,15 @@ class Toolbox {
 public:
     Toolbox( const std::string& _toolboxname, int nSignal, bool bSignaled ) : m_ToolBoxName( _toolboxname ), m_nToolBoxSignal( nSignal ), m_bSignaled( bSignaled ){}
     ~Toolbox();
+
+    /*get()*/
+    inline Toolbox& getToolbox() {
+           return *this;
+    }
+
+    virtual void Create( const std::string& _name, int nSignl, bool bSignl ) = 0;
+    virtual void Destroy() = 0;
+
 };
 
 #endif
