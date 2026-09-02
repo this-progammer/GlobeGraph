@@ -41,6 +41,10 @@ void Cube::CreateCube() {
                                          cube.Unselect();
                                      }
                              }
+                             static MouseTool& mouse = nullptr;
+                             if( mouse.getMouseTool().MouseButtonPress( MB_LEFT_CLCK, SHFT ) && cube.IsSelected() ) {
+                                 cube.Unselect();
+                             }
                          }
                }
        }
