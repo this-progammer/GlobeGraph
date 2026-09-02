@@ -25,7 +25,13 @@ void Cube::CreateCube() {
                     cube.SetName( n );
                          for( auto k = 0; k < 6; k++ ) {
                                  for(;; k) {
+                                     int nSides = cube.m_Sides[k];
+                                     cube.getSides();
                                      cube.AddFace(); // add 6 faces...
+                                         if( nSides < 6 ) {
+                                             cube.DestroyPrimitive();
+                                             std::cout << "Cube Invalid Sides... Destroying Cube..." << "\n";
+                                         }
                                  }
                          }
                }
