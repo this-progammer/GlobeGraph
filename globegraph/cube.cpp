@@ -27,6 +27,9 @@ void Cube::CreateCube() {
                          for( auto k = 0; k < 6; k++ ) {
                                  for(;; k) {
                                      int nSides = cube.m_Sides[k];
+                                         if( !k ) {
+                                             continue;
+                                         }
                                      cube.getSides();
                                      cube.AddFace(); // add 6 faces...
                                          if( nSides < 6 ) {
@@ -51,5 +54,5 @@ void Cube::CreateCube() {
                          }
                }
     }
-    cube.Draw();
+ cube.Draw();
 }
