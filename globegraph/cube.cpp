@@ -51,4 +51,5 @@ void Cube::CreateCube() {
                          }
                }
     }
+    cube.Draw();
 }
