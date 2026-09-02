@@ -101,10 +101,12 @@ void Toolbox::PluginToAPI( const IPlugin& plugin ) {
      plugin.getPlugin();
      PFN_GET_PLUGIN_NAME( plugin.m_Plugin );
      plugin.ConnectToAPI();
+     plugin.IncRef();
 }
 
 void Toolbox::UnplugFromAPI( const IPlugin& plugin ) {
      plugin.getPlugin();
      PFN_GET_PLUGIN_NAME( plugin.m_Plugin );
      plugin.DisconnectToAPI();
+     plugin.DecRef();
 }
