@@ -26,7 +26,7 @@ void Toolbox::AddObject( const std::string& _name, int id ) {
               continue;
           }
           _name.reserve(_name.max_size());
-          std::string typeName = _name;
+          const std::string typeName = _name;
           if( id == PRIMITIVE_PLANE ) {
               IPrimitive& node = nullptr;
                   for( auto it = node.begin(); it != node.end(); it++ ) {
@@ -89,4 +89,10 @@ void Toolbox::AddObject( const std::string& _name, int id ) {
           }
      }
     std::cout << typeName << "\n";
+}
+
+void Toolbox::RemoveObject( const std::string& _name, int id ) {
+     const std::string name = _name;
+     name.erase();
+     id = NULL;
 }
