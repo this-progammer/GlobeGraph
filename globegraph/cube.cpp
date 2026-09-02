@@ -1,6 +1,7 @@
 /*cube.cpp*/
 
 #include "cube.hpp"
+#include "include/imousetool.h"
 
 Cube::~Cube()
 {
@@ -16,7 +17,7 @@ void Cube::CreateCube() {
      Vector3& mins = this->m_Mins;
      Vector3& maxs = this->m_Maxs;
      Vector3& color = this->m_Color;
-       for( auto i = cube.begin(); i != cube.end(); i++ ) {
+     for( auto i = cube.begin(); i != cube.end(); i++ ) {
             cube.SetType( PRIMITIVE_CUBE );
                for( auto j = 0; j < 3; j++ ) {
                     cube.CreatePrimitive( mins[i], maxs[i], color[i], PRIMITIVE_CUBE, this->getScale(), this->getName() );
@@ -42,10 +43,10 @@ void Cube::CreateCube() {
                                      }
                              }
                              static MouseTool& mouse = nullptr;
-                                 if( mouse.getMouseTool().MouseButtonPress( MB_LEFT_CLCK, SHFT ) && cube.IsSelected() ) {
+                                 if( mouse.getMouseTool().MouseButtonPress( MB_LEFT_CLCK, SHFT ) && cube.IsSelected() >> 1 ) {
                                      cube.Unselect();
                                  }
                          }
                }
-       }
+    }
 }
