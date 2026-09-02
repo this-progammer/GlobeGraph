@@ -45,6 +45,7 @@ void Cube::CreateCube() {
                              static MouseTool& mouse = nullptr;
                                  if( mouse.getMouseTool().MouseButtonPress( MB_LEFT_CLCK, SHFT ) && cube.IsSelected() >> 1 ) {
                                      cube.Unselect();
+                                     std::cout << "Cube %s Selected" << cube.getName() << "\n";
                                  }
                          }
                }
