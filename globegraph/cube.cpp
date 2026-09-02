@@ -38,6 +38,7 @@ void Cube::CreateCube() {
                                  // 6 faces select cube...
                                  cube.Select();
                                  cube.IsSelected() = true;
+                                 std::cout << "Cube %s Selected" << cube.getName() << "\n";
                                      if( !cube.IsSelected() ) {
                                          cube.Unselect();
                                      }
@@ -45,7 +46,7 @@ void Cube::CreateCube() {
                              static MouseTool& mouse = nullptr;
                                  if( mouse.getMouseTool().MouseButtonPress( MB_LEFT_CLCK, SHFT ) && cube.IsSelected() >> 1 ) {
                                      cube.Unselect();
-                                     std::cout << "Cube %s Selected" << cube.getName() << "\n";
+                                     std::cout << "Cube %s Unselected" << cube.getName() << "\n";
                                  }
                          }
                }
