@@ -28,7 +28,20 @@ public:
 
     virtual void Create( const std::string& _name, int nSignl, bool bSignl ) = 0;
     virtual void Destroy() = 0;
+    virtual void PluginToAPI( const IPlugin& plugin ) = 0;
+    virtual void UnplugFromAPI( const IPlugin& plugin ) = 0;
 
+    virtual bool PluginListen() = 0;
+
+    virtual void AddObject( const std::string& _name, int id ) = 0;
+    virtual void RemoveObject( const std::string& _name, int id ) = 0;
+
+    virtual void MouseClick( MouseTool& mouse ) = 0;
+
+    inline Toolbox& begin();
+    inline Toolbox& end();
+
+    virtual void SetIcon( const std::string& icon ) = 0;
 };
 
 #endif
