@@ -15,8 +15,13 @@ bool Toolbox::PluginListen() {
         for( auto i = this->begin(); i != this->end(); i++ ) {
              this->getToolbox();
              float t( 0.5f * 2.0f );
-             t++;
-             PFN_GET_PLUGIN_NAME(static_cast<const char*>(this->m_ToolBoxName));
+             PFN_GET_PLUGIN_NAME( static_cast<const char*>( this->m_ToolBoxName ) );
         }
     }
+}
+
+void Toolbox::AddObject( const std::string& _name, int id ) {
+     for( auto i = this->begin(); i != this->end(); i++ ) {
+          
+     }
 }
