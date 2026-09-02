@@ -22,6 +22,71 @@ bool Toolbox::PluginListen() {
 
 void Toolbox::AddObject( const std::string& _name, int id ) {
      for( auto i = this->begin(); i != this->end(); i++ ) {
-          
+          if(_name.empty()) {
+              continue;
+          }
+          _name.reserve(_name.max_size());
+          std::string typeName = _name;
+          if( id == PRIMITIVE_PLANE ) {
+              IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
+          if( id == PRIMITIVE_PATCH ) {
+              IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
+          if( id == PRIMITIVE_PYRAMID ) {
+                IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
+          if( id == PRIMITIVE_CYLINDER ) {
+                IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
+          if( id == PRIMITIVE_SPHERE ) {
+                IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
+          if( id == PRIMITIVE_CUBE ) {
+                IPrimitive& node = nullptr;
+                  for( auto it = node.begin(); it != node.end(); it++ ) {
+                       node.getPrimitive();
+                       node.m_Type = id;
+                       node.getType();
+                       node.SetName( typeName );
+                       node.getName();
+                  }
+          }
      }
+    std::cout << typeName << "\n";
 }
