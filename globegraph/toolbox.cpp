@@ -96,3 +96,15 @@ void Toolbox::RemoveObject( const std::string& _name, int id ) {
      name.erase();
      id = NULL;
 }
+
+void Toolbox::PluginToAPI( const IPlugin& plugin ) {
+     plugin.getPlugin();
+     PFN_GET_PLUGIN_NAME( plugin.m_Plugin );
+     plugin.ConnectToAPI();
+}
+
+void Toolbox::UnplugFromAPI( const IPlugin& plugin ) {
+     plugin.getPlugin();
+     PFN_GET_PLUGIN_NAME( plugin.m_Plugin );
+     plugin.DisconnectToAPI();
+}
