@@ -14,7 +14,9 @@ typedef const char*(PFN_GET_PLUGIN_NAME)(const char* IPLUGIN);
 class IPlugin {
   const char* m_Plugin;
 public:
-  IPlugin( const char* plugin ) : m_Plugin( plugin ){}
+  IPlugin( const char* plugin ) : m_Plugin( plugin ){
+      PFN_GET_PLUGIN_NAME( plugin );
+  }
   ~IPlugin();
 
   /*get the plugin*/
