@@ -63,6 +63,12 @@ public:
     virtual bool IsConnected() = 0;
     /*update()*/
     virtual void Update() = 0;
+    /*setmap()*/
+    virtual void SetMap( const std::string& map ) = 0;
+    /*loadmap()*/
+    virtual void LoadMap() = 0;
+    /*map set map()*/
+    virtual void MapSetMap( IMap& map );
 };
 
 #endif
