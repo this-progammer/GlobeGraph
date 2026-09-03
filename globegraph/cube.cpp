@@ -24,6 +24,9 @@ void Cube::CreateCube() {
                     cube.SetColor( color[i] );
                     const std::string n = this->m_Name;
                     cube.SetName( n );
+                       if( mins[i] == maxs[i] || maxs[i] == mins[i] ) {
+                           continue;
+                       }
                          for( auto k = 0; k < 6; k++ ) {
                                  for(;; k) {
                                      int nSides = cube.m_Sides[k];
