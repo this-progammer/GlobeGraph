@@ -61,7 +61,8 @@ public:
     virtual void Connect() = 0;
     /*is connected()*/
     virtual bool IsConnected() = 0;
-    
+    /*update()*/
+    virtual void Update() = 0;
 };
 
 #endif
