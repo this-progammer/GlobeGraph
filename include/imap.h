@@ -26,6 +26,42 @@ class IMap {
 public:
     IMap( const IPlugin& plugin, int nSignal, const std::string& mapname, size_t mapsize, bool bEdit ) : m_MapPlugin( plugin ), m_nSignal( nSignal ), m_MapName( mapname ), m_MapSize( mapsize ), m_bEditMode( bEdit ){}
     ~IMap();
+
+    /*getPlugin()*/
+    inline const IPlugin& getPlugin() const {
+        return m_MapPlugin;
+    }
+
+    /*getSignal()*/
+    inline int getSignal() const {
+        return m_nSignal;
+    }
+
+    /*getMapName()*/
+    inline const std::string& getMapName() const {
+        return m_MapName;
+    }
+
+    /*getMapSize()*/
+    inline size_t getMapSize() const {
+        return m_MapSize;
+    }
+
+    /*getEditMode()*/
+    inline bool getEditMode() const {
+        return m_bEditMode;
+    }
+
+    /*get()*/
+    inline IMap& getMap() {
+        return *this;
+    }
+
+    /*connect()*/
+    virtual void Connect() = 0;
+    /*is connected()*/
+    virtual bool IsConnected() = 0;
+    
 };
 
 #endif
